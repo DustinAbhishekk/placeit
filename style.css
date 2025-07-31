@@ -1,0 +1,289 @@
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #f59e0b;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --gray: #94a3b8;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--dark);
+  background-color: white;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* <!-- .gradient-bg {
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+}
+-- > */
+
+.gradient-bg {
+  background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #ec4899 100%);
+}
+
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover:after {
+  width: 100%;
+}
+
+.btn-click {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.btn-click:hover {
+  transform: translateY(-2px);
+}
+
+.btn-click:active {
+  transform: translateY(1px);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.testimonial-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(248, 250, 252, 0.9)
+  );
+  backdrop-filter: blur(10px);
+}
+
+.pricing-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip:hover .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.search-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  transform: translateY(10px);
+}
+
+#search-input:focus ~ #search-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-btn.active + .accordion-content {
+  max-height: 500px;
+}
+
+.accordion-btn.active i {
+  transform: rotate(180deg);
+}
+:root {
+            /* Starter Theme (Blue) */
+            --starter-primary: #3B82F6;
+            --starter-secondary: #60A5FA;
+            --starter-dark: #1E40AF;
+            
+            /* Professional Theme (Purple) */
+            --pro-primary: #8B5CF6;
+            --pro-secondary: #A78BFA;
+            --pro-dark: #6D28D9;
+            
+            /* Agency Theme (Pink) */
+            --agency-primary: #EC4899;
+            --agency-secondary: #F472B6;
+            --agency-dark: #BE185D;
+        }
+        
+        .gradient-texts {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .gradient-bgs {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--dark) 100%);
+        }
+        
+        /* Toggle switch styling */
+        #monthly-toggle, #annual-toggle {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #annual-toggle.active {
+            background: linear-gradient(135deg, var(--pro-primary) 0%, var(--pro-dark) 100%);
+            color: white;
+        }
+        
+        #monthly-toggle.active {
+            background: white;
+            color: #1F2937;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        /* Pricing card hover effects */
+        .pricing-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        .group:hover .pricing-card {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Button hover effects */
+        .btn-click {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-click:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-click:active {
+            transform: translateY(1px);
+        }
+        
+        .hover-underline {
+            position: relative;
+        }
+        
+        .hover-underline:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: currentColor;
+            transition: width 0.3s ease;
+        }
+        
+        .hover-underline:hover:after {
+            width: 100%;
+        }
+        
+        /* Custom glow effects */
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+        }
+        
+        .glow-effect:hover {
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.4);
+        }
+        
+        /* Theme-specific styles */
+        .starter-theme {
+            --primary: var(--starter-primary);
+            --secondary: var(--starter-secondary);
+            --dark: var(--starter-dark);
+        }
+        
+        .pro-theme {
+            --primary: var(--pro-primary);
+            --secondary: var(--pro-secondary);
+            --dark: var(--pro-dark);
+        }
+        
+        .agency-theme {
+            --primary: var(--agency-primary);
+            --secondary: var(--agency-secondary);
+            --dark: var(--agency-dark);
+        }
+         .testimonial-nav {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #e2e8f0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .testimonial-nav.active {
+            background-color: #4f46e5;
+            width: 32px;
+            border-radius: 8px;
+        }
+        
+        .mockup-option.active {
+    background: linear-gradient(to right, #7C3AED, #4F46E5);
+    color: white;
+    box-shadow: 0 4px 6px rgba(124, 58, 237, 0.2);
+  }
+  
+  #upload-zone.dragover {
+    background-color: #F5F3FF;
+    border-color: #8B5CF6;
+  }
+  
+  .mockup-preview {
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Perfect mockup styling */
+  #iphone-screen img,
+  #macbook-screen img {
+    object-fit: contain;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+  }
+  
+  #tshirt-design img,
+  #mug-design img {
+    object-fit: contain;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  }
