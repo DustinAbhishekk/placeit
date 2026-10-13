@@ -37,7 +37,7 @@ cd placeit
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000`.
+Open `http://localhost:8000`
 
 Opening `index.html` directly from the filesystem works too, since nothing here needs a server.
 
